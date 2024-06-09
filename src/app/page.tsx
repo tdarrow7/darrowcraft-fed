@@ -1,7 +1,7 @@
 export default function Home() {
   return (
     <main>
-      <h1>DarrowCraft's Coffee</h1>
+      <h1>DarrowCraft's Premium Coffee</h1>
     </main>
   );
 }
