@@ -1,6 +1,6 @@
 import { fetchAllCoffee } from "@/server/actions";
 
-export default async function ProductsPage() {
+export default async function CoffeePage() {
     const coffee = await fetchAllCoffee();
     return (
         <div>
