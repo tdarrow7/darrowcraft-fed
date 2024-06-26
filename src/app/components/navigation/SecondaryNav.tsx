@@ -11,7 +11,7 @@ const links = [
 export const SecondaryNav = () => {
 return (
     <nav>
-        <ul className="flex align-middle">
+        <ul className="flex align-middle justify-end">
             {links.map((link) => {
                 return (
                     <li key={link.name}>
