@@ -1,23 +1,35 @@
-import { fetchAllCoffee } from "@/server/actions";
+import { CoffeeModel } from "@/models/coffee";
+import { fetchCoffee } from "@/server/actions";
+import Image from "next/image";
+import Link from "next/link";
+import { CoffeeDetails } from "../components/CoffeeDetails";
 
 export default async function CoffeePage() {
-    const coffee = await fetchAllCoffee();
-    return (
-        <div>
-            <main>List of coffees</main>
-            {coffee.length === 0 ? <p>Test</p>
-            : <ul>
-                {coffee?.map((c: any) => {
-                    return (
-                        <div key={c.id}>
-                        <h2 className="text-2xl">{c.type}</h2>
-                        <p className="text-sm">{c.description}</p>
-                        </div>
-                    )
-                }
-            )}
+  const coffee = await fetchCoffee();
+  
+  return (
+    <div>
+      <main>List of coffees</main>
+      <div className="container mx-auto">
+          {coffee.length === 0 ? (
+            <p>Nothin here</p>
+          ) : (
+            <ul className="grid grid-cols-3 gap-6">
+              {coffee?.map((c: CoffeeModel) => {
+                return (
+                  <div className="bg-sky-500" key={c.id}>
+                    <Link href={`/coffee/${c.id}`}>
+                      <CoffeeDetails coffee={c}>
+                        
+                      </CoffeeDetails>
+                    </Link>
+                  </div>
+                );
+              })}
             </ul>
-}
+          )}
         </div>
-    );
+
+      </div>
+  );
 }
