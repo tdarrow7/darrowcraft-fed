@@ -1,6 +1,6 @@
 export interface CoffeeModel {
     id: number;
-    type: string;
+    name: string;
     isGround: boolean;
     dateadded: Date;
     roastType: number;
