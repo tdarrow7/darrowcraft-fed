@@ -6,6 +6,7 @@ import { CoffeeDetails } from "../components/CoffeeDetails";
 
 export default async function CoffeePage() {
   const coffee = await fetchCoffee();
+  console.log(coffee);
   
   return (
     <div>
@@ -17,7 +18,7 @@ export default async function CoffeePage() {
             <ul className="grid grid-cols-4 gap-6">
               {coffee?.map((c: CoffeeModel) => {
                 return (
-                  <div className="bg-sky-500" key={c.id}>
+                  <div key={c.id}>
                     <Link href={`/coffee/${c.id}`}>
                       <CoffeeDetails coffee={c}>
                         
