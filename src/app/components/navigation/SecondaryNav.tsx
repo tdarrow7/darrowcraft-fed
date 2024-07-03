@@ -2,10 +2,10 @@ import Link from "next/link"
 
 const links = [
     { name: 'Home', href: '/', target: ''},
-    { name: 'About', href: '/about', target: ''},
     { name: 'Sign In', href: '/sign-in', target: ''},
     { name: 'API', href: 'https://api.timdarrow.com', target: '_blank'},
-    { name: 'Taskify', href: '/taskify', target: '_blank'},
+    { name: 'LinkedIn', href: 'https://www.linkedin.com/in/tdarrow7/', target: '_blank'},
+    { name: 'GitHub', href: 'https://github.com/tdarrow7', target: '_blank'},
 ]
 
 export const SecondaryNav = () => {

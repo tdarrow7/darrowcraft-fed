@@ -4,7 +4,6 @@ import { revalidateTag } from 'next/cache'
 
 export async function fetchCoffee() {
     try {
-        revalidateTag('coffee');
         const data = await fetch('https://api.timdarrow.com/coffee/')
         if (!data) return null;
         else 
@@ -20,7 +19,6 @@ export async function fetchCoffee() {
     
     export async function fetchCoffeeByID(id: string) {
         try {
-            revalidateTag('coffee');
             const data = await fetch(`https://api.timdarrow.com/coffee/${id}`)
         if (!data) return null;
         else return data.json();
