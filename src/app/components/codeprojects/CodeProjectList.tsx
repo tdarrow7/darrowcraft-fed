@@ -5,9 +5,10 @@ import { CodeProjectItem } from './CodeProjectItem';
 interface CodeProjectListProps {
   stackType: string
   codeProjectList: CodeProjectInterface[];
+  index: number;
 }
 
-export const CodeProjectList = ({codeProjectList, stackType}: CodeProjectListProps) => {
+export const CodeProjectList = ({codeProjectList, stackType, index}: CodeProjectListProps) => {
 // const [filteredCodeProjectList, setFilteredCodeProjectList] = useState<CodeProjectInterface[]>()
 const filteredCodeProjectList = codeProjectList.filter((project) => (
   project.stacktype == stackType
@@ -32,14 +33,14 @@ const filteredCodeProjectList = codeProjectList.filter((project) => (
   // const [codeProjectList, codeProjectList] = useState(second)
   
   return (
-    <>
+    <div>
     <h3>{stackType}</h3>
       { filteredCodeProjectList &&
-        filteredCodeProjectList.map((codeProject) => (
-          <CodeProjectItem key={codeProject.id} codeProject={codeProject}/>
+        filteredCodeProjectList.map((codeProject, index) => (
+          <CodeProjectItem key={codeProject.id} codeProject={codeProject} index={index}/>
         ))
       }
-    </>
+    </div>
   )
 }
 

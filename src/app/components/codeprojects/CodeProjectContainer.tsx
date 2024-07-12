@@ -17,8 +17,8 @@ export const CodeProjectContainer = async () => {
 
         <>
             { stackTypes &&
-                stackTypes.map((stackType) => (
-                    <CodeProjectList key={stackType} codeProjectList={codeProjects} stackType={stackType}></CodeProjectList>
+                stackTypes.map((stackType, index) => (
+                    <CodeProjectList key={stackType} codeProjectList={codeProjects} stackType={stackType} index={index}></CodeProjectList>
                 ))
             }
         </>
