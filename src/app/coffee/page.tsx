@@ -6,7 +6,6 @@ import { CoffeeDetails } from "../components/CoffeeDetails";
 
 export default async function CoffeePage() {
   const coffee = await fetchCoffee();
-  console.log(coffee);
   
   return (
     <div>
@@ -19,7 +18,7 @@ export default async function CoffeePage() {
               {coffee?.map((c: CoffeeModel) => {
                 return (
                   <div key={c.id}>
-                    <Link href={`/coffee/${c.id}`}>
+                    <Link href={`/coffee/${c.id}`} className="group">
                       <CoffeeDetails coffee={c}>
                         
                       </CoffeeDetails>
