@@ -3,7 +3,7 @@ import { CoffeeModel } from '@/models/coffee'
 import { fetchCoffeeByID } from '@/server/actions'
 import { CoffeeDetails } from '@/app/components/CoffeeDetails'
 import Image from 'next/image'
-import { Button } from '@/app/components/ui/button'
+import { Button } from '@/app/components/ui/Button'
 import { QuantityCounter } from '@/app/components/ui/QuantityCounter'
 
 export default async function CoffeeDetailsPage({params}: { params: {id: string}}) {
