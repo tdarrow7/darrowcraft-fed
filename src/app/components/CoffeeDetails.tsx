@@ -17,11 +17,11 @@ export const CoffeeDetails = (
         />
       </figure>
       <div className="txt-bx my-2 flex justify-between">
-        <div className="descr translate-x-0 group-hover:translate-x-2 transition-transform">
+        <div className="descr translate-x-0 group-hover:translate-x-2 transition-transform w-4/5">
           <strong className="text-2xl">{coffee.name}</strong>
           <p className="text-sm">{coffee.description}</p>
         </div>
-          <div className="price">$00</div>
+          <div className="price group-hover:scale-105 transition-transform">$00.00</div>
       </div>
     </>
   );
