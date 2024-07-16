@@ -37,7 +37,7 @@ const filteredCodeProjectList = codeProjectList.filter((project) => (
     <h3>{stackType}</h3>
       { filteredCodeProjectList &&
         filteredCodeProjectList.map((codeProject, index) => (
-          <CodeProjectItem key={codeProject.id} codeProject={codeProject} index={index}/>
+          <CodeProjectItem key={codeProject.id} codeProject={codeProject} index={index  }/>
         ))
       }
     </div>
