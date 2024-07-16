@@ -22,6 +22,10 @@ export default function Home() {
             <li>Experience developing backend tools to enhance workflow</li>
             <li>Experience developing leadership</li>
           </ol>
+          <div className="bg-red-200 my-4 p-8 max-w-3xl mx-auto rounded-2xl">
+            <strong className="uppercase text-3xl text-center block">Word of Caution</strong>
+            <p>This site is constantly evolving as new frontend and backend technologies are explored or implemented. Visit often to see whate items have changed.</p>
+          </div>
           <h2 className="">About Me</h2>
           <p>I am a Software Engineer with 7+ years of experience in leading small to large front and backend teams. I have hands-on development work with C#, SQL, CSS, Javascript, and HTML. I come with a track record of producing and implementing software solutions and processes. I thrive in a high-speed, team-based
 environment and enjoy solving complex technical and organizational challenges.</p>
