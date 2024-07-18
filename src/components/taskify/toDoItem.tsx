@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useRef, useState } from 'react'
-import { ITodo, TodoContextType, TodoContext } from '../../contexts/toDoContext'
+import { ITodo, TodoContextType, TodoContext } from '@/contexts/toDoContext'
 import { AiFillEdit} from 'react-icons/ai';
 import {PiTrash} from 'react-icons/pi'
 import { IoIosCheckmark } from "react-icons/io";

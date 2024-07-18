@@ -2,7 +2,7 @@ import { CoffeeModel } from "@/models/coffee";
 import { fetchCoffee, fetchCoffeeByID } from "@/server/actions";
 import Image from "next/image";
 import Link from "next/link";
-import { CoffeeDetails } from "../components/CoffeeDetails";
+import { CoffeeDetails } from "../../components/CoffeeDetails";
 
 export default async function CoffeePage() {
   const coffee = await fetchCoffee();
