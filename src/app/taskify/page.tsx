@@ -1,8 +1,8 @@
 
 
-import TodoInput from "../components/taskify/toDoInput";
-import ToDoList from "../components/taskify/toDoList";
-import TodoProvider from "../contexts/toDoContext";
+import TodoInput from "@/components/taskify/toDoInput";
+import ToDoList from "@/components/taskify/toDoList";
+import TodoProvider from "../../contexts/toDoContext";
 
 
 export default function TaskifyPage() {

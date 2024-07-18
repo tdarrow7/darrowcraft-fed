@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useRef, useContext, BaseSyntheticEvent, useState } from 'react'
-import { TodoContext, TodoContextType } from '../../contexts/toDoContext';
+import { TodoContext, TodoContextType } from '@/contexts/toDoContext';
 
 const TodoInput = () => {
   const [value, setvalue] = useState<string>('');

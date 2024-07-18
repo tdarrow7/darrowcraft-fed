@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useContext, Dispatch, SetStateAction } from 'react';
-import { ITodo, TodoContextType, TodoContext } from '../../contexts/toDoContext'
+import { ITodo, TodoContextType, TodoContext } from '@/contexts/toDoContext'
 import ToDoItem from './toDoItem';
 
 interface TodoListProps {

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { CodeProjectContainer } from "./components/codeprojects/CodeProjectContainer";
+import { CodeProjectContainer } from "../components/codeprojects/CodeProjectContainer";
 
 const projects = [
   {name: 'Quicksilver', href: 'https://quicksilver-2-0.scorpionwebsite.com/', target: "_blank"},

@@ -1,10 +1,10 @@
 import React from 'react'
 import { CoffeeModel } from '@/models/coffee'
 import { fetchCoffeeByID } from '@/server/actions'
-import { CoffeeDetails } from '@/app/components/CoffeeDetails'
+import { CoffeeDetails } from '@/components/CoffeeDetails'
 import Image from 'next/image'
-import { Button } from '@/app/components/ui/Button'
-import { QuantityCounter } from '@/app/components/ui/QuantityCounter'
+import { Button } from '@/components/ui/Button'
+import { QuantityCounter } from '@/components/ui/QuantityCounter'
 
 export default async function CoffeeDetailsPage({params}: { params: {id: string}}) {
 // export const CoffeeDetails = async ({params}: { params: {id: string}}) => {
