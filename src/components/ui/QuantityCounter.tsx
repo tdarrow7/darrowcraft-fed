@@ -4,15 +4,23 @@ import React, { useState } from 'react'
 import { AiFillPlusCircle } from "react-icons/ai";
 import { AiFillMinusCircle } from "react-icons/ai";
 
+interface QuantityCounterProps {
+  quantity: number;
+  handleQuantity: (newQty: number) => void
+}
 
-export const QuantityCounter = () => {
-    const [objCount, setObjCount] = useState(0)
+export const QuantityCounter: React.FC<QuantityCounterProps> = ({quantity, handleQuantity}) => {
+    const [objCount, setObjCount] = useState(quantity)
+    console.log('quantity', quantity);
+    
     const decrement = () => {
-        setObjCount(objCount > 0 ? objCount - 1 : 0);
+        handleQuantity(objCount > 0 ? objCount - 1 : 0);
     }
 
     const increment = () => {
-        setObjCount(objCount + 1);
+      console.log(objCount + 1);
+      
+        handleQuantity(objCount + 1);
     }
 
   return (
