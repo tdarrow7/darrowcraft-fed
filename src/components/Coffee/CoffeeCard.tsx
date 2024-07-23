@@ -1,7 +1,7 @@
 import { CoffeeModel } from "@/models/coffee";
 import Image from "next/image";
 
-export const CoffeeDetails = (
+export const CoffeeCard = (
   { coffee }: { coffee: CoffeeModel },
   className: string = ""
 ) => {
