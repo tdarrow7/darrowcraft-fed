@@ -13,12 +13,11 @@ interface Props {
 export const CoffeeDetails = (props: Props) => {
     const coffee = props.coffee
     const [quantity, setQuantity] = useState(0)
-    const handleQuantity = (qty: number) => {
-        console.log('qty', qty);
-        
+    function handleQuantity(qty: number) {
         setQuantity(qty)
-        console.log(quantity);
     }
+    console.log(coffee);
+    
 
   return (
     <div className='flex justify-between'>
@@ -30,7 +29,7 @@ export const CoffeeDetails = (props: Props) => {
             <div className='prct-detail pt-4 w-1/2 prose prose-headings:font-bold prose-h1:text-5xl prose-h2:text-4xl'>
                 <h1 className='text-4xl font-bold'>{coffee.name}</h1>
                 <p>{coffee.description}</p>
-                <QuantityCounter quantity={quantity} handleQuantity={handleQuantity}></QuantityCounter>
+                <QuantityCounter handleQuantity={handleQuantity}></QuantityCounter>
                 <Button text='Add to Cart'></Button>
             </div>
         </div>
