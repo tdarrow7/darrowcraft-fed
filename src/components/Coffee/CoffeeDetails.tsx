@@ -29,7 +29,7 @@ export const CoffeeDetails = (props: Props) => {
             <div className='prct-detail pt-4 w-1/2 prose prose-headings:font-bold prose-h1:text-5xl prose-h2:text-4xl'>
                 <h1 className='text-4xl font-bold'>{coffee.name}</h1>
                 <p>{coffee.description}</p>
-                <QuantityCounter handleQuantity={handleQuantity}></QuantityCounter>
+                <QuantityCounter quantity={quantity} setQuantity={setQuantity}></QuantityCounter>
                 <Button text='Add to Cart'></Button>
             </div>
         </div>

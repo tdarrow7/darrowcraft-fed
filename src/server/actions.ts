@@ -1,6 +1,9 @@
 'use server'
 
+import axios from 'axios';
 import { revalidateTag } from 'next/cache'
+import { cookies, headers } from 'next/headers';
+import { env } from 'process';
 
 export async function fetchCoffee() {
     try {
@@ -29,4 +32,33 @@ export async function fetchCodeProjects() {
     } catch (error) {
         return {error: error}
     }
+}
+
+interface SessionResponse {
+    sessionID: string
+}
+
+export async function fetchSession() {
+    const cookieStore = cookies();
+    const hasSession = cookieStore.has('_sid')
+    if (!hasSession) {
+        console.log('no session');
+        
+        try {
+            const response = await axios.post<SessionResponse>('https://api.timdarrow.com/session/', {
+                headers: {
+                    'Authorization': `Token ${process.env.API_TOKEN}`
+                }
+            }).then(response => {
+                console.log(response.data);
+                
+            })
+        } catch (error) {
+            console.log('err', error);
+            
+        }
+    }
+    console.log('hasSession', hasSession);
+    
+    return hasSession;
 }
