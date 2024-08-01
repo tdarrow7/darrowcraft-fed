@@ -5,6 +5,8 @@ import Link from "next/link";
 import { CoffeeGrid } from "@/components/Coffee/CoffeeGrid";
 import { Suspense } from "react";
 import { CoffeeSkeleton } from "@/components/Coffee/CoffeeSkeleton";
+import { cookies } from "next/headers";
+import { setCookie } from "@/util/Cookies";
 
 export default function CoffeePage() {
   
