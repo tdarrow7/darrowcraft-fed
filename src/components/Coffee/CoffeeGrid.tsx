@@ -5,6 +5,10 @@ import { CoffeeCard } from "../../components/Coffee/CoffeeCard";
 
 import React from 'react'
 
+interface CoffeeList {
+  coffeeList: CoffeeModel[]
+}
+
 export const CoffeeGrid = async () => {
     const coffee = await fetchCoffee();
 

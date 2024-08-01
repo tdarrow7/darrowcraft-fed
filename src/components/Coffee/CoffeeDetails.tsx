@@ -13,8 +13,10 @@ interface Props {
 export const CoffeeDetails = (props: Props) => {
     const coffee = props.coffee
     const [quantity, setQuantity] = useState(0)
-    function handleQuantity(qty: number) {
-        setQuantity(qty)
+
+    const addToCart = () => {
+        console.log('adding to cart', quantity);
+        
     }
     console.log(coffee);
     
@@ -30,7 +32,7 @@ export const CoffeeDetails = (props: Props) => {
                 <h1 className='text-4xl font-bold'>{coffee.name}</h1>
                 <p>{coffee.description}</p>
                 <QuantityCounter quantity={quantity} setQuantity={setQuantity}></QuantityCounter>
-                <Button text='Add to Cart'></Button>
+                <Button text='Add to Cart' onclick={addToCart} ></Button>
             </div>
         </div>
   )
