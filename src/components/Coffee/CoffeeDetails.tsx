@@ -14,8 +14,9 @@ export const CoffeeDetails = (props: Props) => {
     const coffee = props.coffee
     const [quantity, setQuantity] = useState(0)
 
-    const addToCart = () => {
+    const handleAddToCart = () => {
         console.log('adding to cart', quantity);
+        // tryAddToCart();
         
     }
     console.log(coffee);
@@ -32,7 +33,7 @@ export const CoffeeDetails = (props: Props) => {
                 <h1 className='text-4xl font-bold'>{coffee.name}</h1>
                 <p>{coffee.description}</p>
                 <QuantityCounter quantity={quantity} setQuantity={setQuantity}></QuantityCounter>
-                <Button text='Add to Cart' onclick={addToCart} ></Button>
+                <Button text='Add to Cart' onclick={handleAddToCart} ></Button>
             </div>
         </div>
   )
