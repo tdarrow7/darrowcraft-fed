@@ -2,6 +2,7 @@ import { cookies } from "next/headers";
 
 export enum CookieKeys {
   SESSION = "_session",
+  CART = "_cart"
 }
 
 export function hasCookie(key: CookieKeys) {

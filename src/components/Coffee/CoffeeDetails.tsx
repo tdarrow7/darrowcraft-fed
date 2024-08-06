@@ -16,7 +16,11 @@ export const CoffeeDetails = (props: Props) => {
 
     const handleAddToCart = () => {
         console.log('adding to cart', quantity);
-        // tryAddToCart();
+        // useAddToCart(quantity);
+        const x = fetch('/api/cart/get')
+        console.log(x);
+        
+        
         
     }
     console.log(coffee);
