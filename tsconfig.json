@@ -19,8 +19,9 @@
     ],
     "paths": {
       "@/*": ["./src/*"]
-    }
+    },
+    "target": "ES6"
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/firebase/config.js", "src/firebase/config.js", "src/firebase/nodeApp.js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/firebase/config.js", "src/firebase/config.js", "src/firebase/nodeApp.js", "src/components/navigation/navigationGroups.js"],
   "exclude": ["node_modules"]
 }
