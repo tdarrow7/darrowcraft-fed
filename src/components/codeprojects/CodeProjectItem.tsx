@@ -14,7 +14,7 @@ type Props = {
 export const CodeProjectItem = ({ codeProject, index }: Props) => {
   return (
     <div
-      className={`w-3/4 md:w-4/5 sm:w-full p-4 ${
+      className={`w-full md:w-3/4 sm:w-4/5 p-4 ${
         index % 2 == 0
           ? "bg-green-100 rounded-r-2xl rounded-tl-2xl mr-auto"
           : "bg-green-300 rounded-l-2xl rounded-tr-2xl ml-auto"
