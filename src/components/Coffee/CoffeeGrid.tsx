@@ -13,7 +13,7 @@ export const CoffeeGrid = async () => {
     const coffee = await fetchCoffee();
 
   return (
-<ul className="grid grid-cols-4 gap-6">
+<ul className="grid gap-6 grid-cols-1 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2">
               {coffee?.map((c: CoffeeModel) => {
                 return (
                   <li key={c.id}>
