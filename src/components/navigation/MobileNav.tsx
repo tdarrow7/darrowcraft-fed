@@ -9,20 +9,14 @@ import { IoMdClose } from "react-icons/io";
 export const MobileNav = () => {
   const [isActive, setisActive] = useState(false);
   const mobileNavLinks = secondaryNavLinks.concat(primaryNavLinks);
-  console.log(mobileNavLinks);
   
   function handleActiveState(event: any) {
     setisActive((prev) => !prev);
-    console.log('isActive', isActive);
   }
 
   function handleCloseState(event: any) {
     setisActive((prev) => prev = false)
   }
-//   function handleOpenState(event: any) {
-//     setisActive((prev) => prev = true)
-//   }
-
   return (
     <div
       className={`hamburger ${isActive ? "is-active" : ""}`}

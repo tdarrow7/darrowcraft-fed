@@ -39,8 +39,6 @@ const TodoProvider: FC<{children: ReactNode}> = ({ children }) => {
           title: title,
           isDone: false,
         }
-        console.log(newTodo);
-        
         setTodos([...todos, newTodo])
       }
       
@@ -54,15 +52,12 @@ const TodoProvider: FC<{children: ReactNode}> = ({ children }) => {
       }
 
       const completeTodo = (id: number) => {
-        console.log(todos);
         todos.filter((todo: ITodo) => {
           if (todo.id === id) {
             todo.isDone = !todo.isDone;
             setTodos([...todos])
           }
         })
-        console.log(todos);
-        
       }
 
       const deleteTodo = (id: number) => {

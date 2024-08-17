@@ -10,11 +10,6 @@ export default function useFetchShoppingCart() {
         return initialValue || "";
 
     });
-    // useEffect(() => {
-
-    //     console.log('test', name);
-    // })
-
     return true;
     
 }
