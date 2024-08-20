@@ -1,5 +1,5 @@
 import { CoffeeModel } from "@/models/coffee";
-import { fetchCoffee, fetchCoffeeByID } from "@/server/actions";
+import { fetchCoffee, fetchCoffeeByID } from "@/actions/coffee";
 import Image from "next/image";
 import Link from "next/link";
 import { CoffeeGrid } from "@/components/Coffee/CoffeeGrid";
@@ -9,13 +9,12 @@ import { cookies } from "next/headers";
 import { setCookie } from "@/util/Cookies";
 
 export default function CoffeePage() {
-  
   return (
     <div>
       <main>List of coffees</main>
       <div className="container mx-auto">
-          <CoffeeGrid></CoffeeGrid>
-        </div>
+        <CoffeeGrid></CoffeeGrid>
       </div>
+    </div>
   );
 }
