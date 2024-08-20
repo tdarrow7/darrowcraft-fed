@@ -1,14 +1,9 @@
 "use server";
 import { SessionModel } from "@/models/session";
-import { CookieKeys, getCookie, setCookie } from "@/util/Cookies";
 import axios from "axios";
-import { NextApiRequest, NextApiResponse } from "next";
-import { cookies } from "next/headers";
 import { NextRequest, NextResponse } from "next/server";
 
 export async function GET(request: NextRequest) {
-  // const token = getCookie(CookieKeys.SESSION);
-
   try {
     const response = await axios.post<SessionModel>(
       `${process.env.API_ENDPOINT}session/`,
@@ -27,8 +22,4 @@ export async function GET(request: NextRequest) {
       { status: 500 }
     );
   }
-  // if (!token)
-  // return new Response("Hello, Next.js!", {
-  //   status: 200,
-  // });
 }
