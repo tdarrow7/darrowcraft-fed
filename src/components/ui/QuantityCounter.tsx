@@ -12,11 +12,11 @@ interface QuantityCounterProps {
 export const QuantityCounter: React.FC<QuantityCounterProps> = ({quantity, setQuantity}) => {
     
     const handleDecrement = () => {
-        setQuantity(quantity > 0 ? quantity -1 : quantity)
+        setQuantity((prev) => prev > 0 ? prev -1 : prev)
     }
 
     const handleIncrement = () => {
-      setQuantity(quantity + 1)
+      setQuantity((prev) => prev + 1)
     }
 
   return (

@@ -1,4 +1,4 @@
-import { fetchCodeProjects } from '@/server/actions'
+import { fetchCodeProjects } from '@/actions/codeProjects'
 import React, { Fragment, useState } from 'react'
 import { CodeProjectList } from './CodeProjectList';
 import { CodeProjectInterface } from '@/models/codeProject';

@@ -18,7 +18,6 @@ export const CoffeeDetails = (props: Props) => {
         console.log('adding to cart', quantity);
         
     }
-    console.log(coffee);
     
 
   return (
