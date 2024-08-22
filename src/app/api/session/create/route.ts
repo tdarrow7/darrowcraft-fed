@@ -1,6 +1,8 @@
 "use server";
 import { SessionModel } from "@/models/session";
+import { CookieKeys, setCookie } from "@/actions/cookies";
 import axios from "axios";
+import { cookies } from "next/headers";
 import { NextRequest, NextResponse } from "next/server";
 
 export async function GET(request: NextRequest) {
@@ -14,6 +16,10 @@ export async function GET(request: NextRequest) {
         },
       }
     );
+    console.log("setting cookie using payload", response.data);
+
+    cookies().set(CookieKeys.SESSION, response.data.id);
+    console.log("completed cookie setting", response.data);
     return NextResponse.json(response.data);
   } catch (error) {
     console.log("err", error);
