@@ -1,25 +1,14 @@
 "use client";
-import { ensureSessionID } from "@/actions/session";
-import { SessionModel } from "@/models/session";
-import { CookieKeys, setCookie } from "@/util/Cookies";
-import React, { useEffect, useState } from "react";
+import { ensureSessionID } from "@/util/session";
+import React, { useEffect } from "react";
 import { IoCartOutline } from "react-icons/io5";
 
 type Props = {};
 
 const CartIcon = (props: Props) => {
-  // useEffect(() => {
-  //   const setSessionCookie = async () => {
-  //     const sessionID = ensureSessionID()
-
-  //     setCookie(CookieKeys.SESSION, sessionID.);
-  //   };
-  //   setSessionCookie();
-  // }, []);
-
   useEffect(() => {
     const setSessionCookie = async () => {
-      await fetch("/api/set-session");
+      await ensureSessionID();
     };
     setSessionCookie();
   }, []);
