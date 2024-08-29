@@ -1,5 +1,5 @@
 export interface CartModel {
-  id: number;
+  id: string;
   name?: string;
   session_id: number;
   active: boolean;

@@ -9,7 +9,9 @@ export async function GET(request: NextRequest) {
   try {
     const response = await axios.post<SessionModel>(
       `${process.env.API_ENDPOINT}session/`,
-      {},
+      {
+        active: true,
+      },
       {
         headers: {
           Authorization: `Token ${process.env.API_TOKEN}`,
