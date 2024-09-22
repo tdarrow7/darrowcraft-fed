@@ -9,7 +9,7 @@ export function hasCookie(key: CookieKeys) {
 }
 
 export function getCookie(key: CookieKeys) {
-  return cookies().get(key);
+  return cookies().get(key)?.value;
 }
 
 export function setCookie(
