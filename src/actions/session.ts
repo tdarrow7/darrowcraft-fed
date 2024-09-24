@@ -14,3 +14,7 @@ export const setSession = async () => {
   const data: SessionModel = await response.json();
   return data;
 };
+
+export const getSession = () => {
+  return cookies().get(CookieKeys.SESSION)?.value;
+};
