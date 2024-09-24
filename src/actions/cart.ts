@@ -27,6 +27,10 @@ export const getCart = async () => {
   } catch (error) {}
 };
 
+// export const getCartItem = async () => {
+
+// }
+
 export const setCart = async (session: string) => {
   session;
   try {
