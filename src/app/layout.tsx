@@ -2,6 +2,7 @@
 
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import Script from "next/script";
 import "../globals.css";
 import { Masthead } from "../components/masthead";
 import {
@@ -32,6 +33,10 @@ export default function RootLayout({
           <main className="py-6 px-4">
             {children}
           </main>
+          <Script
+            src="https://sc-connect.scorpion.co/s/bootstrap.a8c47e01-7d72-31d9-32ce-23fa94b35fca.js"
+            strategy="afterInteractive"
+          />
         </body>
       </html>
     </ClerkProvider>
